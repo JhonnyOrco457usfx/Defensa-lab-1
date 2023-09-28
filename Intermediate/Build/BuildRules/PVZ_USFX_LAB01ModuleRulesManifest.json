@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\Estudio Unreal\\EXAMEN LAB\\PVZ_USFX_LAB04-master\\Source\\PVZ_USFX_LAB01\\PVZ_USFX_LAB01.Build.cs",
+		"E:\\Estudio Unreal\\EXAMEN LAB\\PVZ_USFX_LAB04-master\\Source\\PVZ_USFX_LAB01.Target.cs",
+		"E:\\Estudio Unreal\\EXAMEN LAB\\PVZ_USFX_LAB04-master\\Source\\PVZ_USFX_LAB01Editor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
