@@ -1,6 +1,6 @@
-E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\Definitions.PVZ_USFX_LAB01.h
-E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Source\PVZ_USFX_LAB01\Zombie.h
-E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Inc\PVZ_USFX_LAB01\Zombie.generated.h
+E:\SIS457 EXAMEN 2DO LAB\Zombie mago\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\Definitions.PVZ_USFX_LAB01.h
+E:\SIS457 EXAMEN 2DO LAB\Zombie mago\PVZ_USFX_LAB04-master\Source\PVZ_USFX_LAB01\Zombie.h
+E:\SIS457 EXAMEN 2DO LAB\Zombie mago\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Inc\PVZ_USFX_LAB01\Zombie.generated.h
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\INCLUDE\random
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\INCLUDE\__msvc_int128.hpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\INCLUDE\limits

@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Plant.h"
+#include "ZombieNormal.h"
+#include "DecoradorSaltar.h"
+#include "DecoradorVelocidad.h"
 #include "Spawns.generated.h"
 
 
@@ -35,4 +38,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	AZombieNormal* Zombie1;
+	void DecorarZombie(AZombieNormal* Zombie);
+	void SpawnDecoratedZombie();
+	bool estado = true;
+
+	ADecoradorSaltar* SaltarDecorator;
 };

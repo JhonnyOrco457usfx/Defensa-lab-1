@@ -1,2 +1,2 @@
-E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\Definitions.PVZ_USFX_LAB01.h
-E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Source\PVZ_USFX_LAB01\PVZ_USFX_LAB01.h
+E:\SIS457 EXAMEN 2DO LAB\Zombie mago\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\Definitions.PVZ_USFX_LAB01.h
+E:\SIS457 EXAMEN 2DO LAB\Zombie mago\PVZ_USFX_LAB04-master\Source\PVZ_USFX_LAB01\PVZ_USFX_LAB01.h

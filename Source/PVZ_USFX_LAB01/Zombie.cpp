@@ -17,7 +17,7 @@ AZombie::AZombie()
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshZombie1(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_QuadPyramid.Shape_QuadPyramid'"));
 	AspectoZombie->SetStaticMesh(MeshZombie1.Object);
 
-	Velocidad = 50.0f;
+	Velocidad = 5.0f;
 
 	
 	tiempoAcumulado = 0.0;

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\PVZ_USFX_LAB01.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FA2EF343-1ABD-4546-801B-5F5C73D514B0}</UniqueIdentifier>
+      <UniqueIdentifier>{6EE0016C-AA81-448C-924F-A1E96A928BFA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\PVZ_USFX_LAB01.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\PVZ_USFX_LAB01Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{2DD99D3E-BDB9-4AF4-9574-921E9E5C2C21}</UniqueIdentifier>
+      <UniqueIdentifier>{1EBE0110-26C1-4C1E-8D82-8438890E59A8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +26,32 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\PVZ_USFX_LAB01">
-      <UniqueIdentifier>{A512B940-3696-4F60-B033-75DC89A8F296}</UniqueIdentifier>
+      <UniqueIdentifier>{0A3E4A99-1735-4E89-9E5E-D8AC0951C5EC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\DecoradorSaltar.cpp">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\DecoradorSaltar.h">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\DecoradorVelocidad.cpp">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\DecoradorVelocidad.h">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\InterfazZombie.cpp">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\InterfazZombie.h">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\MyInterface.cpp">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\MyInterface.h">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\Plant.cpp">
       <Filter>Source\PVZ_USFX_LAB01</Filter>
     </ClCompile>
@@ -57,6 +83,18 @@
       <Filter>Source\PVZ_USFX_LAB01</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\Zombie.h">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\ZombieMago.cpp">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\ZombieMago.h">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\PVZ_USFX_LAB01\ZombieNormal.cpp">
+      <Filter>Source\PVZ_USFX_LAB01</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\PVZ_USFX_LAB01\ZombieNormal.h">
       <Filter>Source\PVZ_USFX_LAB01</Filter>
     </ClInclude>
   </ItemGroup>

@@ -231,8 +231,8 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I "E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Inc\PVZ_USFX_LAB01"
-/I "E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Source"
+/I "E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Inc\PVZ_USFX_LAB01"
+/I "E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Source"
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -262,12 +262,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Intermediate\Build\Win64\PVZ_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Intermediate\Build\Win64\PVZ_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Intermediate\Build\Win64\PVZ_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Source\PVZ_USFX_LAB01\PVZ_USFX_LAB01GameModeBase.cpp"
-/FI"E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\Definitions.PVZ_USFX_LAB01.h"
-/Fo"E:\Estudio Unreal\Laboratorios\Lab04\PVZ_USFX_LAB01\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\PVZ_USFX_LAB01GameModeBase.cpp.obj"
+/FI"E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\PVZ_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\PVZ_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\PVZ_USFX_LAB01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Source\PVZ_USFX_LAB01\PVZ_USFX_LAB01GameModeBase.cpp"
+/FI"E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\Definitions.PVZ_USFX_LAB01.h"
+/Fo"E:\Estudio Unreal\EXAMEN LAB\PVZ_USFX_LAB04-master\Intermediate\Build\Win64\UE4Editor\Development\PVZ_USFX_LAB01\PVZ_USFX_LAB01GameModeBase.cpp.obj"
 /TP
 /GR-
 /W4

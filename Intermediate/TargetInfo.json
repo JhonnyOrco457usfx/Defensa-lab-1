@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "PVZ_USFX_LAB01",
-			"Path": "E:\\Estudio Unreal\\Laboratorios\\Lab04\\PVZ_USFX_LAB01\\Source\\PVZ_USFX_LAB01.Target.cs",
+			"Path": "E:\\SIS457 EXAMEN 2DO LAB\\Zombie mago\\PVZ_USFX_LAB04-master\\Source\\PVZ_USFX_LAB01.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "PVZ_USFX_LAB01Editor",
-			"Path": "E:\\Estudio Unreal\\Laboratorios\\Lab04\\PVZ_USFX_LAB01\\Source\\PVZ_USFX_LAB01Editor.Target.cs",
+			"Path": "E:\\SIS457 EXAMEN 2DO LAB\\Zombie mago\\PVZ_USFX_LAB04-master\\Source\\PVZ_USFX_LAB01Editor.Target.cs",
 			"Type": "Editor"
 		}
 	]
