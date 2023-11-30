@@ -11,10 +11,12 @@ ASpawns::ASpawns()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	tiempoTranscurrido = 0.0;
-	posicion = 0.0;
-
+	tiempoTranscurrido = 0.0f;
+	posicion = 0.0f;   //esto es para las plantas creo
+	posicionX = -550.0f;
+	posicionY = 550.0f;
 	SaltarDecorator = nullptr; // Inicializa la referencia a nullptr
+	VelocidadDecorator = nullptr;
 }
 
 // Called when the game starts or when spawned
@@ -23,10 +25,6 @@ void ASpawns::BeginPlay()
 	Super::BeginPlay();
 
 
-
-
-	posicionX = -550;
-	posicionY = 550;
 	/*/---------------------------------------------------*/
 	for (int32 i = 0; i < 15; i++)
 	{
@@ -39,14 +37,8 @@ void ASpawns::BeginPlay()
 	}
 
 
-	//Instanciando Zombie
-	//FVector LocZombie = FVector(-550 + grilla * 6, -550, 100.0);
-	//AZombie* Zombie1 = GetWorld()->SpawnActor<AZombie>(AZombie::StaticClass(), FVector(LocZombie), FRotator::ZeroRotator);
-
-	Zombie1 = GetWorld()->SpawnActor<AZombieNormal>(AZombieNormal::StaticClass(), FVector(posicionX, posicionY, 100), FRotator::ZeroRotator);
-	//AZombieNormal* Zombie = GetWorld()->SpawnActor<AZombieNormal>(AZombieNormal::StaticClass(), FVector(posicionX, posicionY, 100), FRotator::ZeroRotator);
-	SaltarDecorator = GetWorld()->SpawnActor<ADecoradorSaltar>(ADecoradorSaltar::StaticClass());
-	SaltarDecorator->DecorarZombie(Zombie1);
+	// Instanciando zombie
+	Zombie1 = GetWorld()->SpawnActor<AZombieNormal>(AZombieNormal::StaticClass(), FVector(-550.0f+grilla*6, -550.0f, 100.0f), FRotator::ZeroRotator);
 }
 
 
@@ -72,55 +64,103 @@ void ASpawns::Tick(float DeltaTime)
 	*/
 
 
-	tiempoTranscurrido += DeltaTime;
+	
 
+	/*
 	// Aplica el decorador después de 4 segundos y asegúrate de hacerlo solo una vez
-	if (tiempoTranscurrido > 4.0f && estado == true && !SaltarDecorator)
+	if (tiempoTranscurrido > 8.0f && estadoSaltar == true && !SaltarDecorator)
 	{
 		// Instancia el decorador de salto
 		SaltarDecorator = GetWorld()->SpawnActor<ADecoradorSaltar>(ADecoradorSaltar::StaticClass());
 		SaltarDecorator->DecorarZombie(Zombie1);
 
-		estado = false; // Asegura que la decoración se aplique solo una vez
+		estadoSaltar = false; // Asegura que la decoración se aplique solo una vez
 	}
 
-	// Mueve el decorador (debería contener la lógica de movimiento del salto)
+	// Mueve el decorador si está presente
 	if (SaltarDecorator)
 	{
 		SaltarDecorator->movimiento();
 	}
 
 	// Verifica si ha pasado un tiempo suficiente para quitar el decorador
-	if (tiempoTranscurrido > 8.0f && SaltarDecorator)
+	if (SaltarDecorator && tiempoTranscurrido > 20.0f)
 	{
 		// Destruye el decorador
 		SaltarDecorator->Destroy();
 		SaltarDecorator = nullptr; // Establece la referencia a nullptr
 	}
+	*/
+
+	tiempoTranscurrido += DeltaTime;
+
+	/*
+	if (tiempoTranscurrido >= 2.0f && tiempoTranscurrido<=6.0f)
+		DecorarSaltar(Zombie1);
+	if (tiempoTranscurrido > 6.0f && tiempoTranscurrido<=9.0f)
+		EliminarDecorarSaltar(Zombie1);
+	*/
+
+	if (tiempoTranscurrido > 5.0f && tiempoTranscurrido <= 8.0f)
+		DecorarVelocidad(Zombie1);
+	if (tiempoTranscurrido > 8.0f)
+		EliminarDecorarVelocidad(Zombie1);
 
 }
 
-void ASpawns::DecorarZombie(AZombieNormal* Zombie)
+
+void ASpawns::DecorarSaltar(AZombieNormal* Zombie)
 {
-	// Aplica el decorador de salto
-	//ADecoradorSaltar* SaltarDecorator = GetWorld()->SpawnActor<ADecoradorSaltar>(ADecoradorSaltar::StaticClass());
-	//SaltarDecorator->DecorarZombie(Zombie);
-
-	/*
-	// Aplica el decorador de velocidad al zombie decorado con salto
-	ADecoradorVelocidad* VelocidadDecorator = GetWorld()->SpawnActor<ADecoradorVelocidad>(ADecoradorVelocidad::StaticClass());
-	VelocidadDecorator->DecorarZombie(SaltarDecorator);
-	*/
-
-
-
-	if (!SaltarDecorator)
+	if (estadoDecoradorSaltar==false && SaltarDecorator==nullptr)
 	{
-		// Si no hay decorador, crea uno y almacena la referencia
+		// Instancia el decorador de salto
 		SaltarDecorator = GetWorld()->SpawnActor<ADecoradorSaltar>(ADecoradorSaltar::StaticClass());
 		SaltarDecorator->DecorarZombie(Zombie);
-	}
 
+		estadoDecoradorSaltar = true; // Asegura que la decoración se aplique solo una vez
+	}
+	if (SaltarDecorator != nullptr)
+	{
+		SaltarDecorator->movimiento();
+	}
+}
+
+void ASpawns::EliminarDecorarSaltar(AZombieNormal* Zombie)
+{
+	if (SaltarDecorator!= nullptr)
+	{
+		// Destruye el decorador
+		SaltarDecorator->Destroy();
+		SaltarDecorator = nullptr; // Establece la referencia a nullptr
+		estadoDecoradorSaltar = false;
+	}
+}
+
+void ASpawns::DecorarVelocidad(AZombieNormal* Zombie)
+{
+	if (estadoDecoradorVelocidad == false && VelocidadDecorator == nullptr)
+	{
+		// Instancia el decorador de salto
+		VelocidadDecorator = GetWorld()->SpawnActor<ADecoradorVelocidad>(ADecoradorVelocidad::StaticClass());
+		VelocidadDecorator->DecorarZombie(Zombie);
+
+		estadoDecoradorVelocidad = true; // Asegura que la decoración se aplique solo una vez
+	}
+	if (VelocidadDecorator != nullptr)
+	{
+		VelocidadDecorator->movimiento();
+	}
+}
+
+void ASpawns::EliminarDecorarVelocidad(AZombieNormal* Zombie)
+{
+	if (VelocidadDecorator != nullptr)
+	{
+		// Destruye el decorador
+		VelocidadDecorator->Destroy();
+		VelocidadDecorator = nullptr; // Establece la referencia a nullptr
+		estadoDecoradorVelocidad = false;
+	}
 }
 
 
@@ -135,23 +175,4 @@ void ASpawns::DestroyPlant(int32 PlantIndex)
 			PlantToRemove->Destroy();
 		}
 	}
-}
-
-void ASpawns::SpawnDecoratedZombie()
-{
-	/*
-	// Instancia un zombie normal
-    AZombieNormal* ZombieBase = GetWorld()->SpawnActor<AZombieNormal>(AZombieNormal::StaticClass(), FVector(0.0f, 0.0f, 100.0f), FRotator::ZeroRotator);
-
-    // Aplica decoradores
-    ADecoradorSaltar* ZombieSaltarin = GetWorld()->SpawnActor<ADecoradorSaltar>(ADecoradorSaltar::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
-    ZombieSaltarin->DecorarZombie(ZombieBase);
-
-    ADecoradorVelocidad* ZombieVeloz = GetWorld()->SpawnActor<ADecoradorVelocidad>(ADecoradorVelocidad::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator);
-    ZombieVeloz->DecorarZombie(ZombieSaltarin);
-
-	*/
-
-
-	DecorarZombie(Zombie1);
 }

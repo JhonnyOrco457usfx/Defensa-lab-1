@@ -30,31 +30,18 @@ AZombieNormal::AZombieNormal()
 
 void AZombieNormal::movimiento()
 {
-	/*
-	// Obtener posicion en X
-	FVector Posicion = GetActorLocation();
-	float PosicionX = Posicion.X;
+	
+	// Obtener la posición actual del zombie
+	FVector PosicionActual = GetActorLocation();
 
-	//Animar movimiento hacia x=0
-	FVector UbicacionObjetivo = FVector(PosicionX, 550.0f, 100.0f);
-	FVector Direccion = (UbicacionObjetivo - this->GetActorLocation()).GetSafeNormal();
-	float DistanciaObjetivo = FVector::Dist(UbicacionObjetivo, this->GetActorLocation());
-	float DeltaMove = Velocidad * GetWorld()->DeltaTimeSeconds;
+	// Calcular la posición objetivo en el eje X
+	FVector UbicacionObjetivo(PosicionActual.X, PosicionActual.Y+Velocidad, PosicionActual.Z);
 
-	if (DeltaMove > DistanciaObjetivo)
-	{
-		this->SetActorLocation(UbicacionObjetivo); //Actualiza instantaneamente la posicion del zombie a (UbicacionObjetivo)
-	}
-	else
-	{
-		this->AddActorWorldOffset(Direccion * DeltaMove); //Suma (Direccion * DeltaMove) a la posicion actual del zombie
-	}*/
+	// Interpolar suavemente hacia la posición objetivo con una velocidad constante
+	FVector NuevaPosicion = FMath::VInterpConstantTo(PosicionActual, UbicacionObjetivo, GetWorld()->GetDeltaSeconds(), Velocidad);
 
-
-	// Lógica de movimiento del zombie base
-	FVector NewLocation = GetActorLocation();
-	NewLocation.X += Velocidad; // Puedes ajustar la velocidad base
-	SetActorLocation(NewLocation);
+	// Establecer la nueva posición del zombie
+	SetActorLocation(NuevaPosicion);
 }
 
 void AZombieNormal::DecorarZombie(AActor* Zombie)
@@ -75,7 +62,12 @@ void AZombieNormal::Tick(float DeltaTime)
 
 	movimiento();
 
-	
-
+	for (IInterfazZombie* Decorador : Decoradores)
+	{
+		// Llama al método de movimiento de cada decorador
+		if (Decorador)
+		{
+			Decorador->movimiento();
+		}
+	}
 }
-

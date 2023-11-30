@@ -31,4 +31,5 @@ public:
 private:
 	AActor* DecoratedZombie;
 	float AumentoVelocidad;
+
 };

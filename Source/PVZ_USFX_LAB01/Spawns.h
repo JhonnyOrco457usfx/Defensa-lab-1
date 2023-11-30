@@ -39,9 +39,14 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	AZombieNormal* Zombie1;
-	void DecorarZombie(AZombieNormal* Zombie);
-	void SpawnDecoratedZombie();
-	bool estado = true;
+	bool estadoDecoradorSaltar = false;   // true = activo aplicado  ; false = inactivo no aplicado
+	bool estadoDecoradorVelocidad = false;
 
 	ADecoradorSaltar* SaltarDecorator;
+	ADecoradorVelocidad* VelocidadDecorator;
+
+	void DecorarSaltar(AZombieNormal* Zombie);
+	void EliminarDecorarSaltar(AZombieNormal* Zombie);
+	void DecorarVelocidad(AZombieNormal* Zombie);
+	void EliminarDecorarVelocidad(AZombieNormal* Zombie);
 };

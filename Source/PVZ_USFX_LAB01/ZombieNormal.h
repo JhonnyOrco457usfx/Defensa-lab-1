@@ -43,6 +43,8 @@ public:
 
 	virtual void movimiento() override;
 	virtual void DecorarZombie(AActor* Zombie) override;
+
+	TArray<IInterfazZombie*> Decoradores;
 private:
 	AActor* DecoratedZombie;
 
